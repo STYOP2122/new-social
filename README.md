@@ -165,25 +165,3 @@ http://localhost:3000
 ```
 
 ---
-
-## Скриншоты
-
-Добавь сюда скриншоты проекта:
-
-```
-screenshots/feed.png
-screenshots/profile.png
-screenshots/chat.png
-```
-
-Пример:
-
-```markdown
-![Feed](screenshots/feed.png)
-```
-
----
-
-## License
-
-MIT
