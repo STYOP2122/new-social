@@ -1,0 +1,35 @@
+.home-container {
+  display: flex;
+  gap: 2vh;
+  padding: 2vh 5vh 0vh;
+  min-height: 100%;
+  color: #FAFAFA;
+}
+
+.friends-list,
+.friend-recommendations {
+  flex: 1;
+}
+
+.feed {
+  flex: 1.778;
+}
+
+@media (max-width: 768px) {
+  .home-container {
+    flex-direction: column;
+    padding: 0px;
+    gap: 0px;
+  }
+
+  .friends-list,
+  .friend-recommendations,
+  .feed {
+    flex: unset;
+    width: 100%;
+  }
+
+  .friend-recommendations {
+    display: none;
+  }
+}

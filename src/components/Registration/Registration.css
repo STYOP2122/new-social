@@ -1,0 +1,180 @@
+.registration-container {
+    width: 100%;
+    height: 100%;
+    background: #18191A;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.registration-subcontainer {
+    width: 62.038vh;
+    height: 50.741vh;
+    background: #404142;
+    border-radius: 1vh;
+    margin-bottom: 5vh;
+    display: flex;
+    gap: 4vh;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 0.5sease -in-out;
+}
+
+.registration-title {
+    color: #FAFAFA;
+    font-size: 2.8vh;
+    text-align: center;
+}
+
+.registration-container p.error {
+    color: #FF4C4C;
+}
+
+.registration-container p.success {
+    color: #3CB371;
+}
+
+.registration-subcontainer>form {
+    width: 26.112vh;
+    display: flex;
+    flex-direction: column;
+    gap: 1vh;
+}
+
+.registration-subcontainer input {
+    width: 100%;
+    padding: 1vh;
+    background: none;
+    border: 1px solid #FAFAFA;
+    border-radius: 8px;
+    color: #FAFAFA;
+    font-size: 16px;
+    transition: border-color 0.3s;
+    font-size: 1.5vh;
+}
+
+.registration-subcontainer input:focus {
+    border-color: #5767B8;
+    outline: none;
+}
+
+.registration-subcontainer input::placeholder {
+    color: #FAFAFA;
+}
+
+.registration-subcontainer button {
+    padding: 1.1vh;
+    background: #5767B8;
+    border: 1px solid #5767B8;
+    border-radius: 0.8vh;
+    color: #FAFAFA;
+    font-size: 1.8vh;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.registration-subcontainer button:hover {
+    background: #3F509F;
+    border-color: #3F509F;
+}
+
+.registration-already {
+    color: #FAFAFA;
+    font-size: 1.5vh;
+}
+
+.registration-link {
+    color: #5767B8;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+.registration-link:hover {
+    color: #3F509F;
+}
+
+.registration-link {
+    color: #FAFAFA;
+    font-weight: 800;
+    text-decoration: underline;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@media (max-width: 768px) {
+    .registration-subcontainer {
+        width: 90%;
+    }
+
+    .registration-title {
+        font-size: 1.2rem;
+    }
+
+    .registration-subcontainer>form {
+        width: 80%;
+    }
+
+    .registration-subcontainer input {
+        font-size: 14px;
+        padding: 10px 14px;
+    }
+
+    .registration-subcontainer button {
+        font-size: 14px;
+        padding: 10px 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .registration-subcontainer {
+        width: 100%;
+        padding: 15px;
+    }
+
+    .registration-title {
+        font-size: 1rem;
+        margin-bottom: 15px;
+    }
+
+    .registration-subcontainer>form {
+        width: 100%;
+        gap: 10px;
+    }
+
+    .registration-subcontainer input {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    .registration-subcontainer button {
+        font-size: 14px;
+        padding: 10px 15px;
+    }
+
+    .registration-already {
+        font-size: 12px;
+    }
+
+    .registration-link {
+        font-size: 12px;
+    }
+}
+
+.message-email{
+    text-align: center;
+    color: green;
+    width: 80%;
+}

@@ -1,0 +1,148 @@
+/* src/components/Home/FriendsList.css */
+
+.friends-list-container{
+    flex: 0.85;
+}
+
+.friends-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    text-align: left;
+    padding: 0 2vh;
+    font-size: 1.8vh;
+}
+
+.friend {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.friend-image {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.friend-info {
+    flex-grow: 1;
+    overflow: hidden;
+    /* Для длинных имен */
+}
+
+.friend-name {
+    font-weight: bold;
+    display: block;
+    font-size: 14px;
+}
+
+.friend-bio {
+    font-size: 0.9em;
+    color: #555;
+    margin-top: 5px;
+    word-wrap: break-word;
+    font-size: 12px;
+}
+
+.friend-message {
+    width: 24px;
+    height: 24px;
+    fill: #FAFAFA;
+    transition: fill 0.3s ease;
+    cursor: pointer;
+}
+
+.friend-message:hover {
+    fill: #666;
+    /* Цвет при наведении */
+}
+
+/* Респонсивность */
+@media (max-width: 768px) {
+    .friends-list {
+        padding: 5px;
+        /* Уменьшенное поле */
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+    }
+
+    .friend {
+        padding: 5px;
+        margin-bottom: 5px;
+        max-width: 85px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .friend-image {
+        width: 60px;
+        /* Меньше изображение */
+        height: 60px;
+        margin-right: 0px;
+    }
+
+    .friend-name {
+        font-size: 12px;
+        /* Уменьшенный шрифт */
+        text-align: center;
+
+    }
+
+    .friend-bio {
+        font-size: 10px;
+        /* Уменьшенный шрифт для биографии */
+    }
+
+    .friend-message,
+    .friends-title {
+        display: none;
+    }
+
+    .feed,
+    .post {
+        padding: 0px;
+    }
+}
+
+@media (max-width: 480px) {
+    .friends-list {
+        padding: 5px;
+        /* Уменьшенное поле */
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+    }
+
+    .friend {
+        padding: 5px;
+        margin-bottom: 5px;
+        max-width: 85px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .friend-image {
+        margin-bottom: 5px;
+        /* Отступ для картинки */
+        margin-right: 0px;
+    }
+
+    .friend-info {
+        text-align: left;
+        /* Выравнивание информации */
+    }
+
+    .friend-message,
+    .friends-title {
+        display: none;
+    }
+}

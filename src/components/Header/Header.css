@@ -1,0 +1,284 @@
+/* Header.css */
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 5vh;
+    height: 6.482vh;
+    border-bottom: 1px solid #ddd;
+    width: 100%;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 2vh;
+}
+
+.header-title {
+    font-size: 1.5rem;
+    margin-right: 15px;
+    color: gray;
+}
+
+.header-title span {
+    color: #FAFAFA;
+    font-weight: bold;
+}
+
+.search-bar {
+    padding: 0.4vh 1vw;
+    border-radius: 10px;
+    width: 13.1315vw;
+    outline: none;
+    border: 1px solid #3A3B3C;
+    background: #3A3B3C;
+    transition: border-color 0.3sease;
+    font-size: 1.6vh;
+}
+
+.search-bar::placeholder {
+    color: #FAFAFA;
+}
+
+.search-bar:focus {
+    border-color: #007bff;
+    /* Border color on focus */
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    width: 40%;
+    justify-content: space-around;
+}
+
+.icon-links {
+    display: flex;
+    width: 100%;
+    /* Take up full width within nav */
+    justify-content: space-around;
+    /* Even spacing for each icon */
+}
+
+.icon {
+    width: 24px;
+    height: 24px;
+    fill: #666;
+    transition: fill 0.3s ease;
+}
+
+.icon:hover {
+    fill: #FAFAFA;
+    /* Hover color for icons */
+}
+
+.nav-links {
+    color: #FAFAFA;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1.8vh;
+    transition: color 0.3sease;
+}
+
+.nav-links:hover {
+    color: #007bff;
+    /* Darker shade on hover */
+}
+
+.active-icon .icon {
+    fill: #FAFAFA;
+    animation: iconAnimation 0.8s ease;
+}
+
+.active-icon {
+    border-bottom: 2px solid transparent;
+    padding-bottom: 4px;
+    animation: borderAnimation 0.8s ease forwards;
+}
+
+@keyframes iconAnimation {
+    0% {
+        transform: scale(0.9);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes borderAnimation {
+    0% {
+        border-color: transparent;
+    }
+
+    100% {
+        border-color: #FAFAFA;
+    }
+}
+
+.nav-links {
+    color: #FAFAFA;
+    text-decoration: none;
+    margin-left: 20px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+/* Same as before with .active-icon animation */
+.profile-icon {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+/* Header.css */
+.icon-links {
+    display: flex;
+    gap: 20px;
+    position: relative;
+    /* Only necessary if dropdown positioning needs it */
+}
+
+/* Wrapper for profile icon and dropdown */
+.profile-dropdown-wrapper {
+    position: relative;
+}
+
+/* Dropdown styling */
+.dropdown {
+    position: absolute;
+    top: 60px;
+    /* Adjust as needed to align under profile icon */
+    right: 0;
+    background: #242526;
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    visibility: hidden;
+    z-index: 1000;
+}
+
+/* Show dropdown when open */
+.profile-dropdown-wrapper .dropdown {
+    opacity: 1;
+    transform: translateY(0);
+    visibility: visible;
+}
+
+.notifications-dropdown-wrapper {
+    position: relative;
+    cursor: pointer;
+}
+
+.menu-toggle {
+    display: none;
+    cursor: pointer;
+}
+
+.link-title {
+    display: none;
+    cursor: pointer;
+    color: #666;
+    font-weight: 800;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+}
+
+.menu.open {
+    display: flex;
+    flex-direction: column;
+}
+
+@media (max-width: 768px) {
+    header {
+        padding: 15px;
+    }
+
+    .menu {
+        display: none;
+        flex-direction: column;
+        background: #242526;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 100%;
+        padding: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        z-index: 1000;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .link-icon {
+        display: flex;
+        align-items: center;
+        gap: 3%;
+    }
+
+    .link-title {
+        display: block;
+    }
+
+    .icon-links {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .search-bar {
+        display: none;
+    }
+
+    .active-icon {
+        border: none;
+    }
+
+    .active-icon>div {
+        color: #FAFAFA;
+    }
+
+    .profile-icon {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        gap: 3%;
+    }
+
+    .profile-dropdown-wrapper {
+        display: flex;
+        align-items: center;
+        gap: 3%;
+    }
+
+    .menu.open {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: flex-end;
+        padding: 25px;
+        font-weight: 800;
+    }
+
+    .notifications-dropdown-wrapper {
+        display: flex;
+        gap: 3%;
+        align-items: center;
+    }
+}
+
+.burger-icon {
+    stroke: #FAFAFA;
+}
+
+.notification-icon-wrapper {
+    display: flex;
+}

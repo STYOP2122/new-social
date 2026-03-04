@@ -1,0 +1,72 @@
+/* src/components/Dropdown.css */
+.dropdown {
+    position: absolute;
+    top: 50px; /* Позиция под профилем */
+    right: 0;
+    background: linear-gradient(145deg, #333, #242526); /* Градиент для фона */
+    border-radius: 10px;
+    padding: 10px; /* Увеличены отступы */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Мягкая тень */
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: opacity 0.3s ease-out, transform 0.3s ease-out;
+    visibility: hidden; /* Скрыто по умолчанию */
+    z-index: 1000;
+    width: 150px; /* Увеличена ширина для предотвращения переноса */
+}
+
+/* Стили для списка опций */
+.dropdown-options {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.dropdown-options li {
+    padding: 12px;
+    margin: 5px 0;
+    transition: background 0.3s ease;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.dropdown-options a{
+    cursor: pointer;
+}
+
+/* Цвет текста и поведение при наведении */
+.dropdown-options li a,
+.dropdown-options li button {
+    color: #E0E0E0;
+    text-decoration: none;
+    font-size: 1rem;
+    display: block;
+    transition: color 0.3s ease, background 0.3s ease;
+}
+
+/* Эффект при наведении на ссылку и кнопку */
+.dropdown-options li a:hover,
+.dropdown-options li button:hover {
+    color: rgb(99, 92, 92); /* Синий цвет при наведении */
+    background: rgba(255, 255, 255, 0.1); /* Легкий фон при наведении */
+}
+
+/* Показ выпадающего меню при открытии */
+.dropdown-open .dropdown {
+    opacity: 1;
+    transform: translateY(0);
+    visibility: visible;
+}
+
+/* Оформление кнопки Logout */
+.dropdown-options li button {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    text-align: left; /* Выравнивание текста */
+}
+
+/* Убираем фон на кнопке */
+.dropdown-options li button:hover {
+    background: rgba(255, 255, 255, 0.1); /* Легкий эффект при наведении */
+}

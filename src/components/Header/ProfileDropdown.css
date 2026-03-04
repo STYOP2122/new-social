@@ -1,0 +1,71 @@
+/* ProfileDropdown.css */
+.profile-dropdown {
+    right: 0;
+    position: absolute;
+    display: flex;
+    gap: 10px;
+    min-width: 18.5rem;
+    top: 60px;
+    flex-direction: column;
+    background-color: #242526;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    padding: 10px;
+    color: #FAFAFA;
+    z-index: 255;
+}
+
+.dropdown-button {
+    background: none;
+    border: none;
+    padding: 8px 12px;
+    text-align: left;
+    cursor: pointer;
+    font-size: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.3s;
+}
+
+.dropdown-button:hover {
+    background-color: #0c0c0c;
+}
+
+.profile-info {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin-top: 5px;
+}
+
+.avatar-image-dropdown{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.profile-dropdown button{
+    color: #FAFAFA;
+}
+
+.dropdown-button svg{
+    fill: #FAFAFA;
+}
+
+.dropdown-button>span{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.swap-icon{
+    stroke: #FAFAFA;
+}
+
+@media (max-width: 768px) {
+    .profile-dropdown{
+        width: 100%;
+        top: 100%;
+    }
+}

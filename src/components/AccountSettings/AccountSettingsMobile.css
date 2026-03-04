@@ -1,0 +1,35 @@
+.mobile-settings-layout{
+    background: #242526;
+    color: #FAFAFA;
+    font-weight: 800;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.mobile-settings-container{
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+}
+
+.mobile-settings-list{
+    display: flex;
+    justify-content: space-between;
+}
+
+.mobile-section-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+.image-name-section-settings{
+    min-width: 250px;
+}
+
+.button-section-settings{
+    min-width: auto;
+}

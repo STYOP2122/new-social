@@ -1,0 +1,204 @@
+/* Base styles for mobile first */
+.currency-button-container {
+    position: fixed;
+    bottom: 1.5rem;
+    left: 1.5rem;
+    z-index: 1000;
+}
+
+.currency-button {
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #7c3aed, #4f46e5);
+    color: white;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.currency-button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+.currency-button:active {
+    transform: scale(0.95);
+}
+
+.currency-button.open {
+    transform: scale(1.1);
+}
+
+.currency-dropdown {
+    position: absolute;
+    bottom: 4.5rem;
+    left: 0;
+    width: 18rem;
+    background: rgba(30, 30, 45, 0.95);
+    backdrop-filter: blur(10px);
+    border-radius: 1rem;
+    padding: 1.5rem;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    animation: fadeInUp 0.3s ease-out;
+}
+
+.balance-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    background: linear-gradient(to right, #a78bfa, #ec4899);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.balance-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.balance-amount {
+    font-size: 2.25rem;
+    font-weight: 700;
+    background: linear-gradient(to right, #818cf8, #06b6d4);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.currency-symbol {
+    font-size: 0.875rem;
+}
+
+.earnings-rate {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background-color: rgba(34, 197, 94, 0.2);
+    padding: 0.25rem 0.75rem;
+    border-radius: 9999px;
+}
+
+.trend-icon {
+    color: #4ade80;
+}
+
+.rate-text {
+    color: #4ade80;
+    font-weight: 600;
+}
+
+.conversion-amount {
+    font-size: 1.25rem;
+    color: #d1d5db;
+}
+
+.exchange-button {
+    margin-top: 1.5rem;
+    width: 100%;
+    background: linear-gradient(to right, #8b5cf6, #6366f1);
+    color: white;
+    font-weight: 700;
+    padding: 0.75rem 1rem;
+    border-radius: 9999px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.exchange-button:hover {
+    background: linear-gradient(to right, #7c3aed, #4f46e5);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.arrow-icon {
+    transition: transform 0.3s ease;
+}
+
+.exchange-button:hover .arrow-icon {
+    transform: translateX(0.25rem);
+}
+
+/* Animation */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive styles */
+@media (min-width: 769px) {
+    .currency-button-container {
+        bottom: 1.5rem;
+        right: 1.5rem;
+        left: auto;
+        top: auto;
+    }
+    
+    .currency-dropdown {
+        bottom: 4.5rem;
+        right: 0;
+        left: auto;
+        animation: fadeInUp 0.3s ease-out;
+    }
+}
+
+@media (max-width: 768px) {
+    .currency-dropdown {
+        position: fixed;
+        bottom: 4.5rem;
+        left: 1rem;
+        right: auto;
+        width: calc(100% - 2rem);
+        animation: fadeInUp 0.3s ease-out;
+    }
+}
+
+@media (max-width: 480px) {
+    .currency-button-container {
+        bottom: 1rem;
+        left: 1rem;
+    }
+    
+    .currency-dropdown {
+        padding: 1rem;
+        bottom: 4rem;
+        left: 1rem;
+        width: calc(100% - 2rem);
+    }
+
+    .balance-title {
+        font-size: 1.25rem;
+    }
+
+    .balance-amount {
+        font-size: 1.75rem;
+    }
+
+    .conversion-amount {
+        font-size: 1rem;
+    }
+
+    .exchange-button {
+        padding: 0.5rem 1rem;
+        font-size: 0.875rem;
+    }
+}

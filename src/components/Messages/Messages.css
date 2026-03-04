@@ -1,0 +1,505 @@
+.messages-container {
+    display: flex;
+    color: #FAFAFA;
+    height: 100%;
+}
+
+.chats-list {
+    width: 30%;
+    border-right: 1px solid #ddd;
+    padding: 10px 0;
+    overflow-y: auto;
+}
+
+.chat-item {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.chat-item:hover {
+    background: #0b0b0b;
+}
+
+.call-icon,
+.video-call-icon {
+    fill: #CDCCCC;
+}
+
+.call-icon {
+    width: 24px;
+    height: 24px;
+}
+
+.video-call-icon {
+    width: 28px;
+    height: 24px;
+}
+
+.messages-icon-container {
+    width: 100%;
+    padding: 0px 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.message-write-icon {
+    fill: #CDCCCC;
+    width: 24px;
+    height: 26px;
+}
+
+.messages-avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+    position: relative;
+}
+
+.chat-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.chat-name {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.chat-last-message {
+    font-size: 0.9rem;
+    color: #FAFAFA;
+}
+
+.chat-messages {
+    width: 70%;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    /* Для Firefox */
+    scrollbar-color: #888 #f0f0f0;
+}
+
+
+.chat-messages::-webkit-scrollbar {
+    width: 8px;
+}
+
+.chat-messages::-webkit-scrollbar-track {
+    background: #f0f0f0;
+    border-radius: 10px;
+}
+
+.chat-messages::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 10px;
+}
+
+.chat-messages::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+.messages-list {
+    flex-grow: 1;
+    overflow-y: auto;
+}
+
+.message-item {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+    max-width: 70%;
+    padding: 0px 15px;
+}
+
+.message-content {
+    max-width: 720px;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.message-item:not(.my-message) .message-content {
+    background: #242526;
+    color: #FAFAFA;
+}
+
+.message-sender {
+    display: flex;
+    align-items: center;
+}
+
+.message-info {
+    margin-left: 10px;
+    display: flex;
+    gap: 5px;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.message-time {
+    font-size: 0.8rem;
+    color: #888;
+}
+
+.no-chat-selected {
+    color: #888;
+    text-align: center;
+    margin-top: 1vh;
+    font-size: 1.5vh;
+}
+
+.chat-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #242526;
+    padding: 0.9% 5%;
+    border-bottom: 1px solid gray;
+}
+
+.user-info {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+}
+
+.user-info h3 {
+    margin-right: 10px;
+    margin-top: 0.3rem;
+}
+
+.call-buttons {
+    display: flex;
+    gap: 35px;
+}
+
+.user-image-container {
+    position: relative;
+}
+
+.status-indicator {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 5%;
+    right: 15%;
+}
+
+.status-indicator.online {
+    background-color: #0F7D18;
+}
+
+.status-indicator.offline {
+    background-color: gray;
+}
+
+.message-day {
+    text-align: center;
+    font-size: 0.9rem;
+    color: #FAFAFA;
+    margin: 10px 0;
+}
+
+.message-item {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+    max-width: 70%;
+    padding: 0px 15px;
+}
+
+.message-item {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+    max-width: 70%;
+    padding: 0px 15px;
+}
+
+.my-message .message-content {
+    background: #242526;
+    color: #FAFAFA;
+    max-width: 540px;
+    border: 1px solid #242526;
+    word-wrap: break-word;
+}
+
+.message-item:not(.my-message) .message-content {
+    background: #242526;
+    color: #FAFAFA;
+    max-width: 540px;
+    word-wrap: break-word;
+}
+
+
+.message-content {
+    max-width: 540px;
+    /* Ограничиваем максимальную ширину сообщения */
+    min-width: 20px;
+    /* Минимальная ширина для коротких сообщений */
+    width: auto;
+    /* Ширина автоматически подстраивается под содержимое */
+    padding: 10px;
+    border-radius: 10px;
+    word-wrap: break-word;
+    /* Перенос длинных слов на новую строку */
+}
+
+.message-content {
+    display: inline-block;
+    max-width: 540px;
+    min-width: 20px;
+    padding: 10px;
+    border-radius: 10px;
+    word-wrap: break-word;
+}
+
+.message-item {
+    display: inline-block;
+    /* Для автоматической подгонки ширины под текст */
+    max-width: 70%;
+    /* Ограничиваем максимально возможную ширину */
+    padding: 5px 10px;
+    /* Минимальные отступы */
+    border-radius: 8px;
+    word-wrap: break-word;
+    color: #FAFAFA;
+    align-self: flex-start;
+    /* Выравнивание для сообщений других пользователей */
+}
+
+.messages-list {
+    flex: 1;
+    padding: 10px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.username-message-container {
+    display: flex;
+    gap: 5px;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.message-not-own-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 5px;
+}
+
+.my-message {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 40px;
+}
+
+.send-button {
+    background-color: #0078FF;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    cursor: pointer;
+}
+
+.send-button:hover {
+    background-color: #005bb5;
+}
+
+.chat-messages {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.messages-list {
+    overflow-y: auto;
+    flex-grow: 1;
+}
+
+.message-input-container {
+    padding: 10px 45px;
+    padding: 10px 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.input-message-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.message-input {
+    flex-grow: 0.9;
+    padding: 10px;
+    font-size: 1rem;
+    background: none;
+    border: none;
+    color: #FAFAFA;
+}
+
+.message-input::placeholder {
+    color: #FAFAFA;
+}
+
+.input-icons {
+    fill: #FAFAFA;
+}
+
+.message-input-input-container {
+    width: 100%;
+    background: #242526;
+    border-radius: 10px;
+    border: 1px solid #242526;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 10px;
+}
+
+.input-icon {
+    cursor: pointer;
+}
+
+.emoji-picker-container {
+    position: absolute;
+    bottom: 70px;
+    left: 20px;
+    z-index: 10;
+    background-color: white;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+}
+
+.EmojiPickerReact {
+    background-color: #242526;
+    border: 1px solid #242526;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.EmojiPickerReact div {
+    background: #242526;
+}
+
+.EmojiPickerReact h2 {
+    background: #242526;
+    color: #FAFAFA;
+}
+
+.EmojiPickerReact input {
+    background: #242526;
+}
+
+.EmojiPickerReact .epr-icn-search {
+    background: none;
+}
+
+.message-input-container {
+    position: relative;
+    /* Ensures the emoji picker is positioned relative to this container */
+}
+
+.input-icon {
+    cursor: pointer;
+}
+
+/* Анимация появления нового сообщения слева направо */
+@keyframes message-fade-in {
+    0% {
+        opacity: 0;
+        transform: translateX(-20px);
+        /* Начинаем с левого края */
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+        /* Завершаем в обычной позиции */
+    }
+}
+
+.new-message {
+    animation: message-fade-in 0.3s ease-out;
+    /* Уменьшили время анимации до 0.3s */
+}
+
+.chat-messages {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* ... (rest of the existing CSS) ... */
+
+/* Add these new styles for mobile responsiveness */
+@media (max-width: 768px) {
+    .messages-container {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .chats-list,
+    .chat-messages {
+        width: 100%;
+    }
+
+    .chat-header {
+        padding: 10px;
+    }
+
+    .back-icon {
+        width: 32px;
+        height: 32px;
+        margin-right: 10px;
+        cursor: pointer;
+        fill: #FAFAFA;
+    }
+
+    .user-info {
+        flex: 1;
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
+    .call-buttons {
+        display: flex;
+        margin-right: 0.2rem;
+        gap: 1.2rem;
+    }
+
+    .message-input-container {
+        padding: 10px;
+    }
+
+    .user-info h3 {
+        margin-top: 10px;
+        font-size: 0.9rem;
+    }
+
+    .message-input-input-container {
+        padding: 5px;
+    }
+
+    .messages-list {
+        padding: 0;
+    }
+
+    .my-message {
+        padding-right: 0.75rem;
+    }
+}

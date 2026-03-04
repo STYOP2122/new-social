@@ -1,0 +1,39 @@
+
+@font-face {
+  font-family: Gilroy;
+  src: url("./fonts/Gilroy-Regular.ttf");
+  font-style: normal;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: Gilroy;
+  font-style: normal;
+  font-weight: 500;
+  src: url("./fonts/Gilroy-Medium.ttf");
+}
+
+@font-face {
+  font-family: Gilroy;
+  font-style: normal;
+  font-weight: 600;
+  src: url("./fonts/Gilroy-SemiBold.ttf");
+}
+
+* {
+  font-family: Gilroy;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style-type: none;
+}
+
+/* index.css or App.css */
+html,
+body,
+#root {
+  margin: 0;
+  padding: 0;
+  background: #18191A;
+  height: 100%;
+}

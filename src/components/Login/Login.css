@@ -1,0 +1,118 @@
+.login-container {
+    width: 100%;
+    height: 100%;
+    background: #18191A;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-subcontainer {
+    gap: 5vh;
+    background-color: #404142;
+    border-radius: 1vh;
+    width: 62.038vh;
+    height: 45.186vh;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    animation: fadeIn 0.5sease -in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.login-title {
+    font-size: 3.2vh;
+    color: #FAFAFA;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1vh;
+    width: 26.112vh;
+}
+
+.login-form input {
+    padding: 1vh;
+    border: 1px solid #ddd;
+    color: #FAFAFA;
+    background: none;
+    border-radius: 0.8vh;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+    font-size: 1.4vh;
+}
+
+.login-form input::placeholder {
+    color: #FAFAFA;
+}
+
+.login-form input:focus {
+    border-color: #4f6d7a;
+    outline: none;
+}
+
+.login-form button {
+    padding: 1vh;
+    background-color: #5767B8;
+    color: #fff;
+    border: none;
+    border-radius: 1vh;
+    font-size: 1.5vh;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.login-form button:hover {
+    background-color: #384481;
+}
+
+.login-options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.4vh;
+    color: #FAFAFA;
+}
+
+.login-options a {
+    color: #FAFAFA;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.login-options a:hover {
+    color: gray;
+}
+
+.remember-login {
+    display: flex;
+    gap: 0.8vh;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-signup {
+    font-size: 1.3vh;
+    text-align: left;
+    color: #FAFAFA;
+}
+
+.login-link {
+    color: #FAFAFA;
+    text-decoration: underline;
+    font-weight: 800;
+}

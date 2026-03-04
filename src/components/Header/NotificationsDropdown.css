@@ -1,0 +1,173 @@
+.notifications-dropdown {
+  position: absolute;
+  min-width: 20rem;
+  color: #FAFAFA;
+  top: 60px;
+  left: 0px;
+  background: #242526;
+  border-radius: 8px;
+  padding: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  visibility: hidden;
+  z-index: 1000;
+  animation: dropdownAppear 0.3s ease forwards;
+}
+
+.notifications-dropdown-wrapper .notifications-dropdown {
+  opacity: 1;
+  transform: translateY(0);
+  visibility: visible;
+}
+
+@keyframes dropdownAppear {
+  0% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.dropdown-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  background: #141415;
+  border-radius: 10px;
+  padding: 5px;
+}
+
+.dropdown-header button {
+  background: none;
+  border: none;
+  color: #FAFAFA;
+  font-size: 16px;
+  cursor: pointer;
+  padding: 10px 10px;
+  transition: 0.3s;
+  font-weight: bold;
+  flex: 1;
+}
+
+.dropdown-header button.active {
+  background: #353539;
+  color: lightgray;
+  font-weight: bold;
+  border-radius: 10px;
+}
+
+.notification-list {
+  max-height: 300px; /* Высота области уведомлений */
+  overflow-y: auto; /* Добавление прокрутки */
+  scrollbar-width: thin; /* Узкие скроллбары */
+  scrollbar-color: #888 transparent; /* Цвета скроллбара */
+}
+
+.notification-list::-webkit-scrollbar {
+  width: 6px; /* Толщина скроллбара */
+}
+
+.notification-list::-webkit-scrollbar-thumb {
+  background-color: #888; /* Цвет ползунка */
+  border-radius: 4px;
+}
+
+.notification-list::-webkit-scrollbar-thumb:hover {
+  background-color: #555; /* Цвет при наведении */
+}
+
+.notification-item {
+  padding: 10px;
+  background: #222;
+  border-radius: 5px;
+  margin-bottom: 5px;
+  color: #fff;
+}
+
+.no-notifications {
+  text-align: center;
+  color: #888;
+  margin-top: 20px;
+}
+
+.notification-group {
+  margin-bottom: 15px;
+}
+
+.notification-date {
+  font-weight: bold;
+  font-size: 14px;
+  color: #999;
+  margin-bottom: 5px;
+}
+
+.user-notification {
+  display: flex;
+  align-items: flex-start;
+}
+
+.user-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.notifications-user-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.user-name {
+  font-size: 1em;
+  font-weight: bold;
+  color: #ddd;
+}
+
+.notification-message {
+  color: #bbb;
+  font-size: 0.8rem;
+}
+
+.friend-request-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 5px;
+}
+
+.friend-request-accept,
+.friend-request-decline {
+  border-radius: 4px;
+  padding: 5px 10px;
+  color: #fff;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.friend-request-accept{
+  background-color: #3B37F0;
+  color: #FAFAFA;
+  border: 1px solid gray;
+}
+
+.friend-request-decline{
+  background-color: none;
+  color: gray;
+  border: 1px solid #FAFAFA;
+}
+
+.friend-request-accept:hover {
+  background: #2623ab;
+  color: gray;
+}
+
+.friend-request-decline:hover {
+  background: #f44336;
+  color: #FAFAFA;
+}

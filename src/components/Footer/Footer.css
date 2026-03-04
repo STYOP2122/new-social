@@ -1,0 +1,79 @@
+/* Основной стиль для контейнера футера */
+.footer-container {
+    width: 100%;
+    background: #242526;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5vh;
+    height: 7vh;
+}
+
+/* Основной стиль для списка */
+.footer-container>ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    color: #FAFAFA;
+    gap: 3.5vh;
+}
+
+/* Стили текста футера */
+.footer-name {
+    color: gray;
+}
+
+.footer-name>span {
+    color: #FAFAFA;
+    font-weight: 600;
+}
+
+/* Респонсивные стили */
+@media (max-width: 768px) {
+
+    /* Изменяем контейнер футера на меньших экранах */
+    .footer-container {
+        padding: 15px 0;
+    }
+
+    /* Список в футере */
+    .footer-container>ul {
+        width: 90%;
+        flex-direction: column;
+        /* Вертикально для удобства */
+        align-items: center;
+        gap: 8px;
+    }
+
+    /* Уменьшаем размер текста */
+    .footer-container .links,
+    .footer-name {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    /* Ещё больше уменьшаем отступы на маленьких экранах */
+    .footer-container {
+        padding: 10px 0;
+    }
+
+    /* Список футера для мобильных устройств */
+    .footer-container>ul {
+        width: 100%;
+        gap: 6px;
+    }
+
+    /* Ещё меньший размер текста */
+    .footer-container .links,
+    .footer-name {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 768px) {
+    .footer-container {
+        display: none;
+    }
+}
